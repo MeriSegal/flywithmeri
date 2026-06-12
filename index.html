@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>על הערסל עם מרי</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background-color: #F7F3EA;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1F5A35;
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn .4s ease; }
+
+        .tab-btn.active {
+            border-bottom: 2px solid #E85C9A;
+            color: #E85C9A;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="max-w-4xl mx-auto py-12 px-4 text-center">
+        <div class="h-72 md:h-96 rounded-3xl overflow-hidden border-4 border-white shadow-inner mb-6">
+    <img src="images/shenkin8.jpeg" alt="meri hammock" class="w-full h-full object-cover">
+</div>
+
+
+        <h1 class="text-5xl font-bold mb-8">על הערסל עם מרי</h1>
+        <p class="text-xl italic text-[#6F7F3A]">שיעורי ערסלים בסגנון אקרובטיקה וסדנאות בסגנון יוגה אווירית לכל הרמות</p>
+        <p class="text-xl italic text-[#6F7F3A]">בתל אביב</p>
+        <p class="text-xl mb-10 italic text-[#6F7F3A] flex items-center gap-2 justify-center">
+    <a href="https://www.instagram.com/merihammock" target="_blank" class="underline flex items-center gap-2">
+        @merihammock
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#6F7F3A" viewBox="0 0 24 24">
+          <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+        </svg>
+    </a>
+</p>
+
+       
+<a href="https://wa.me/972546900880?text=היי%20מרי,%20הגעתי%20דרך%20האתר%20להזמנת%20סדנה"
+   target="_blank"
+   class="inline-flex items-center justify-center bg-[#1F5A35] text-white px-6 py-3 rounded-full font-bold hover:bg-[#6F7F3A] transition-all gap-2">
+    <img src="images/whatsapp.png" class="w-5 h-5" alt="">
+    למידע והזמנת סדנה
+</a>
+
+
+    </header>
+
+    <!-- TABS -->
+    <main class="max-w-4xl mx-auto px-4 pb-12">
+
+        <div class="flex flex-wrap justify-center gap-2 mb-8 border-b border-[#E6D7BE] pb-4">
+            <button onclick="openTab(event, 'about')" class="tab-btn active px-4 py-2 font-bold">נעים להכיר</button>
+            <button onclick="openTab(event, 'faq')" class="tab-btn px-4 py-2 font-bold">שאלות ותשובות</button>
+            <button onclick="openTab(event, 'tips')" class="tab-btn px-4 py-2 font-bold">טיפים לאימון מוצלח </button>
+            <button onclick="openTab(event, 'testimonials')" class="tab-btn px-4 py-2 font-bold">המלצות</button>
+            <button onclick="openTab(event, 'pricing')" class="tab-btn px-4 py-2 font-bold">מחירון</button>
+            <button onclick="openTab(event, 'gallery')" class="tab-btn px-4 py-2 font-bold">גלריה</button>
+            <button onclick="openTab(event, 'contact')" class="tab-btn px-4 py-2 font-bold">יצירת קשר</button>
+        </div>
+
+       <!-- ABOUT -->
+<section id="about" class="tab-content active bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D]">
+    <h2 class="text-2xl font-bold mb-4">נעים להכיר</h2>
+
+    <!-- תמונה מיושרת לימין -->
+   <!--  <div class="float-right w-48 h-60 ml-4 mb-4 rounded-2xl overflow-hidden border-4 border-[#C8DD8D] shadow-sm">
+        <img src="images/meriface1.jpg" alt="meri hammock" class="w-full h-full object-cover">
+    </div> -->
+
+
+  <div class="w-48 h-60 mb-4 rounded-2xl overflow-hidden border-4 border-[#C8DD8D] shadow-sm
+            mx-auto md:mx-0
+            float-none md:float-right
+            md:ml-6">
+    <video 
+        id="meriVideo"
+        src="images/merivid.mp4"
+        muted
+        playsinline
+        class="w-full h-full object-cover">
+    </video>
+</div>
+
+
+
+    <p class="mb-4">
+        היי, אני מרי, כבר יותר מעשור שאני בעולם האקרובטיקה האווירית <br>ומתוכם מעל חמש שנים מלמדת ערסלים.
+    </p>
+
+    <p class="mb-4">
+        בשיעורים אני מלמדת בסגנון אקרובטיקה ומלווה את המתאמנות והמתאמנים <br>מהבסיס לתרגילים מורכבים.
+    </p>
+
+    <p class="mb-4">
+        הסיפוק הכי גדול שלי זה לראות מתאמנות ומתאמנים מתמידים, מתחזקים, מתגמשים, צוברים ביטחון
+        ומגלים בעצמם יכולות שהם לא ידעו שקיימות בהם. <br>האווירה בשיעורים חברית ותומכת עוזרים אחד לשנייה,
+        צוחקים, משתפים וגדלים יחד.
+    </p>
+
+    <p class="mb-4">
+        בסדנאות החוויה רכה יותר ובסגנון יוגה אווירית, בשונה משיעור רגיל.
+        <br>הגישה שלי בסדנאות היא לאפשר היכרות ראשונית ונעימה עם הערסל, <br>הזדמנות להתנסות,
+        להרגיש את התנועה באוויר וליהנות מחוויה חד פעמית בצורה הכי כיפית ובטוחה שיש.
+    </p>
+
+    <!-- ניקוי float כדי שהסקשן הבא לא יעלה למעלה -->
+    <div class="clear-both"></div>
+</section>
+
+
+
+        <!-- FAQ -->
+        <section id="faq" class="tab-content bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D]">
+            <h2 class="text-2xl font-bold mb-6">שאלות ותשובות</h2>
+
+            <details class="mb-4">
+                <summary class="font-bold cursor-pointer">אני מתחילה לגמרי, זה מתאים לי?</summary>
+                <p class="mt-2">כן! אין צורך בניסיון קודם, אבל כדאי לבוא עם רצון להתמיד.</p>
+            </details>
+
+            <details class="mb-4">
+                <summary class="font-bold cursor-pointer">מה לובשים לשיעור?</summary>
+                <p class="mt-2">טייץ או מכנסיים ארוכים ובגדים נוחים ללא רוכסנים.</p>
+                <p class="mt-2">הערסל יכול ללחוץ או לייצר חיכוך על עור חשוף </p>
+            </details>
+
+            <details class="mb-4">
+                <summary class="font-bold cursor-pointer">האם אני צריכה להיות חזקה או גמישה?</summary>
+                <p class="mt-2">לא, הכוח והגמישות נבנים בהדרגה.</p>
+            </details>
+
+            <details class="mb-4">
+                <summary class="font-bold cursor-pointer">מה קורה בסדנה ולמה לצפות? </summary>
+                <p class="mt-2">סדנה היא חוויה חד פעמית מאפשרת לכל אחד ואחת לנסות משהו חדש, זו הזדמנות להשתחרר לצחוק ולהנות, </p>
+                <p class="mt-2">נלמד להכיר את הערסל בצורה בטוחה ונוחה, עם תרגול שמשלב משחקיות, ביטחון וגילוי של יכולות חדשות.</p>
+                <p class="mt-2">הזדמנות מעולה לגיבוש חברתי או חיבור זוגי</p>
+
+            </details>
+
+            <details class="mb-4">
+                <summary class="font-bold cursor-pointer"> איך נראה שיעור רגיל ולמי הוא מתאים?</summary>
+                <p class="mt-2">השיעורים מתאימים למי שמחפש/ת ספורט שבו אפשר להתמיד ולהתפתח, </p>
+                <p class="mt-2">התרגילים נלמדים מהבסיס ומתפתחים לפי היכולת והידע הנרכש. </p>
+            </details>
+
+            <h3 class="font-bold mt-6">שעות פעילות</h3>
+            <p>ימי שני ורביעי — 18:15 עד 19:10</p>
+        </section>
+
+
+        <section id="tips" class="tab-content bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D] mt-8">
+            <h2 class="text-2xl font-bold mb-4">טיפים לאימון מוצלח</h2>
+
+            <ul class="space-y-4">
+
+                <li>
+                    <span class="font-bold text-[#1F5A35]">1. שתו מספיק מים</span>
+                    <p class="mt-1">
+                        להגיע מיובשים עלול לגרום לסחרחורות, בחילות וכאבי ראש ופשוט להרוס את החוויה. <br>שתייה לאורך היום עושה את כל ההבדל.
+                    </p>
+                </li>
+
+                <li>
+                    <span class="font-bold text-[#1F5A35]">2. התלבשו בהתאם</span>
+                    <p class="mt-1">
+                        שיער אסוף, טייץ/טרנינג ארוך צמוד ולעיתים חולצה עם שרוול, כל אלה מגנים על העור ומונעים כוויות. <br>תכשיטים ורוכסנים עדיף להשאיר בבית כדי לשמור עליכם ועל הערסל.
+                    </p>
+                </li>
+
+                <li>
+                    <span class="font-bold text-[#1F5A35]">3. אכלו בזמן הנכון</span>
+                    <p class="mt-1">
+                        מומלץ לאכול כשעתיים לפני אימון (או 3 שעות למערכת עיכול רגישה). <br>התרגול כולל מנחים הפוכים ויותר נעים כשהקיבה לא מלאה.
+                    </p>
+                </li>
+
+                <li>
+                    <span class="font-bold text-[#1F5A35]">4. להקשיב לגוף אבל לא לוותר</span>
+                    <p class="mt-1">
+                        התקדמות מגיעה כשמאתגרים את עצמנו, אבל חשוב להבדיל בין קושי טבעי לבין כאב שמאותת לעצור. <br>אם משהו מרגיש לא תקין, מדברים עם המדריכה ומתאימים את האימון.
+                    </p>
+                </li>
+
+                <li>
+                    <span class="font-bold text-[#1F5A35]">5. להגיע עם סבלנות וראש פתוח</span>
+                    <p class="mt-1">
+                        לא כל תרגיל מצליח בניסיון הראשון, וזה לגמרי חלק מהדרך. תנו לגוף זמן, <br>חוגגים כל התקדמות קטנה ונהנים מהמסע, לא רק מהתוצאה.
+                    </p>
+                </li>
+
+            </ul>
+        </section>
+
+
+
+        <!-- TESTIMONIALS -->
+
+        <section id="testimonials" class="tab-content bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D]">
+            <h2 class="text-2xl font-bold mb-4">המלצות</h2>
+            <div id="testimonialsList"></div>
+
+            <p class="italic mb-2">"השיעורים העלו לי את הביטחון העצמי! ממליצה לכולן" : נועה</p>
+            <p class="italic mb-2">"מרי מורה מדהימה, נותנת המון תחושת ביטחון, הרגשתי בטוחה מהרגע הראשון" : יעל</p>
+            <p class="italic">"זה פשוט קסם. כל שיעור מרגיש כמו מתנה לעצמי" : שירה</p>
+
+                <section id="add-testimonial" class="bg-white p-6 rounded-2xl shadow-sm border border-[#C8DD8D] mt-6">
+                    <h3 class="text-xl font-bold mb-4">השתתפתי בשיעור/ סדנה ורוצה להמליץ:</h3>
+
+                    <form id="testimonialForm" class="space-y-4">
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">השם שלך</label>
+                            <input type="text" id="nameInput" class="w-full p-2 border rounded" required>
+                        </div>
+
+                        <div>
+                            <label class="block mb-1 text-sm font-medium">ההמלצה שלך</label>
+                            <textarea id="textInput" class="w-full p-2 border rounded h-24" required></textarea>
+                        </div>
+
+                        <button type="submit" class="bg-[#E85C9A] text-white px-4 py-2 rounded">
+                            שליחת המלצה
+                        </button>
+
+                        <p id="successMsg" class="text-green-600 mt-2 hidden">ההמלצה נשלחה! תודה ♥ המלצה תופיע באתר לאחר שתאושר </p>
+                    </form>
+                </section>
+
+        </section>
+
+        <!-- PRICING -->
+        <section id="pricing" class="tab-content bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D]">
+    <h2 class="text-2xl font-bold mb-6">מחירון</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+         <div>
+            <h3 class="font-bold text-[#E85C9A] mb-2">שיעורי ניסיון</h3>
+            <ul class="space-y-2">
+                <li>כרטיסיית מיני (2 שיעורים) : 90 ₪</li>
+                <li>שיעור ניסיון בודד : 50 ₪</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 class="font-bold text-[#6F7F3A] mb-2">מסלולים קבועים</h3>
+            <ul class="space-y-2">
+                <li>חופשי חודשי : 390 ₪</li>
+                <li>כרטיסיה קטנה (4 שיעורים) : 260 ₪</li>
+                <li>כרטיסיה כפולה (8 שיעורים) : 480 ₪</li>
+                <li>שיעור בודד : 80 ₪</li>
+            </ul>
+        </div>
+       
+    </div>
+
+    <!-- סדנאות -->
+    <div class="mt-10">
+        <h3 class="font-bold text-[#1F5A35] mb-2">סדנאות ושיעורים פרטיים</h3>
+        <ul class="space-y-2">
+            <li>סדנת היכרות וכיף עם הערסל : מחיר משתנה לפי תאריך</li>
+            <li>סדנאות עד 9 אנשים : בתיאום מראש ובתשלום מקדמה: 150 ₪</li>
+            <li>סדנאות לקבוצות / לזוגות / ימי הולדת / יום נישואין</li>
+        </ul>
+    </div>
+
+<div class="mt-10 text-center md:text-left">
+    <a href="documents/policy.pdf"
+       target="_blank"
+       class="inline-block bg-[#1F5A35] text-white px-6 py-3 rounded-full font-bold hover:bg-[#6F7F3A] transition-all">
+        מדיניות ותקנון
+    </a>
+</div>
+
+
+
+</section>
+
+
+        <!-- GALLERY -->
+        <section id="gallery" class="tab-content">
+
+                <!-- TABS -->
+            <div class="flex justify-center gap-6 mb-6">
+                <button class="tab-btn-gallery active text-[#E85C9A] font-bold pb-2 border-b-2 border-[#E85C9A]" data-tab="photos">
+                    תמונות
+                </button>
+
+                <button class="tab-btn-gallery text-[#1F5A35] font-bold pb-2" data-tab="videos">
+                    וידאו
+                </button>
+            </div>
+
+
+
+                <!-- PHOTOS TAB -->
+                <section id="photos" class="gallery-tab active">
+
+                    <div class="overflow-x-auto pb-4">
+                        <div class="grid grid-rows-2 grid-flow-col gap-4">
+
+                                            <!-- מיכל הגלילה -->
+                            <div class="overflow-x-auto pb-4">
+
+                                <!-- גריד פנימי עם 2 שורות וגלילה אופקית -->
+                                <div class="grid grid-rows-2 grid-flow-col gap-4">
+
+                                    <!-- תמונה 1 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/meri.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 2 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin2.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 3 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin3.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 4 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/sadnamaze.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 5 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin7.jpeg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 6 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin6.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 7 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin1.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 8 -->
+                                      <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                         <img src="images/shenkin10.jpg" class="w-full h-full object-cover">
+                                    </div>
+                                  
+
+                                    <!-- תמונה 9 -->
+                                     <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin9.jpg" class="w-full h-full object-cover object-contain">
+                                    </div>
+
+                                    <!-- תמונה 10 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin5.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 11 -->
+                                    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin4.jpg" class="w-full h-full object-cover">
+                                    </div>
+
+                                    <!-- תמונה 12 -->
+                                      <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                        <img src="images/shenkin8.jpeg" class="w-full h-full object-cover">
+                                    </div>
+                                   
+
+                                </div>
+                            </div>
+                         
+
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- VIDEOS TAB -->
+                <section id="videos" class="gallery-tab hidden">
+
+                    <div class="overflow-x-auto pb-4">
+                        <div class="grid grid-rows-2 grid-flow-col gap-4">
+
+                            <!-- 12 וידאוים — את רק תחליפי את ה-src -->
+                            <!-- Video 1 -->
+                            <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/sadnazug1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <!-- Video 2 -->
+                               <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/galandshalom.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+                           
+
+                            <!-- Video 3 -->
+                            <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/sadna1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <!-- Video 4 -->
+                             <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/sadnazug2.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+                           
+
+                            <!-- Video 5 -->
+                            <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/shalomdrop.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <!-- Video 6 -->
+                            <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/sadna2.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <!-- Video 7 -->
+                          <!--   <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/merivid.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div>
+ -->
+                            <!-- Video 8 -->
+                         <!--    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/merivid.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div> -->
+
+                            <!-- Video 9 -->
+                         <!--    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/merivid.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div> -->
+
+                            <!-- Video 10 -->
+                         <!--    <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/merivid.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div> -->
+
+                            <!-- Video 11 -->
+                           <!--  <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/merivid.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div> -->
+
+                            <!-- Video 12 -->
+                          <!--   <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
+                                <video src="images/merivid.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                            </div> -->
+
+                        </div>
+                    </div>
+
+                </section>
+
+         
+        </section>
+
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="tab-content bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D] text-center">
+            <h2 class="text-2xl font-bold mb-4">יצירת קשר</h2>
+            <p class="mb-4">מוזמנ/ת לפנות אלי לכל שאלה, לתיאום סדנה או שיעור ניסיון:</p>
+
+            <a href="https://wa.me/972546900880" class="inline-block px-8 py-3 bg-[#E85C9A] text-white rounded-full font-bold hover:bg-[#1F5A35] transition-all">
+                שלחי הודעת וואטסאפ
+            </a>
+
+            <p class="mt-6 text-sm opacity-70">
+                אינסטגרם:
+                <a href="https://www.instagram.com/merihammock" target="_blank" class="underline">
+                    @merihammock
+                </a>
+                <br>
+                אפליקציה:
+                <a href="https://play.google.com/store/apps/details?id=arbox.app.com" class="underline" target="_blank">
+                    לחצי כאן
+                </a>
+                : יש להירשם לשיעור לקבלת שם משתמש וסיסמה
+            </p>
+        </section>
+
+    </main>
+
+
+ <!-- גלריית וידאו -->
+<script>
+    // טאבים
+    const tabButtons = document.querySelectorAll('.tab-btn-gallery');
+    const tabs = document.querySelectorAll('.gallery-tab');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            // עיצוב כפתורים
+            tabButtons.forEach(b => {
+                b.classList.remove('active', 'border-b-2', 'border-[#E85C9A]', 'text-[#E85C9A]');
+                b.classList.add('text-[#1F5A35]');
+            });
+
+            btn.classList.add('active', 'border-b-2', 'border-[#E85C9A]', 'text-[#E85C9A]');
+
+            // הצגת טאבים
+            tabs.forEach(tab => tab.classList.add('hidden'));
+            document.getElementById(btn.dataset.tab).classList.remove('hidden');
+        });
+    });
+
+
+    // הפעלה רק בהובר או בלחיצה
+    const videos = document.querySelectorAll('#videos video');
+
+    videos.forEach(video => {
+
+        // דסקטופ – הפעלה בהובר
+        video.addEventListener('mouseenter', () => {
+            video.play();
+        });
+
+        video.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+
+        // מובייל – הפעלה בלחיצה
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                // עוצרים את כל השאר
+                videos.forEach(v => {
+                    v.pause();
+                    v.currentTime = 0;
+                });
+                video.play();
+            } else {
+                video.pause();
+                video.currentTime = 0;
+            }
+        });
+    });
+</script>
+
+
+ <!-- מעבר בין גלריית תמונות לוידאו -->
+<script>
+function openTab(evt, tabName) {
+    // מסתיר את כל הטאבים
+    const tabs = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+    }
+
+    // מסיר active מכל הכפתורים
+    const buttons = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove("active");
+    }
+
+    // מציג את הטאב הנבחר
+    document.getElementById(tabName).classList.add("active");
+
+    // מסמן את הכפתור הנבחר
+    evt.currentTarget.classList.add("active");
+}
+</script>
+
+ <!-- הפעלת וידאו בהצגה ראשית -->
+<script>
+    const video = document.getElementById('meriVideo');
+
+    function playWithPause() {
+        video.play();
+
+        video.onended = () => {
+            setTimeout(() => {
+                video.play();
+            }, 3000); // 5 שניות הפסקה
+        };
+    }
+
+    playWithPause();
+</script>
+
+
+
+    <!-- הצגת המלצות מאושרות פיירבייס-->
+   <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+        import { 
+            getFirestore, collection, query, where, orderBy, getDocs, addDoc, serverTimestamp 
+        } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD22eombB2iXSupx5xGpJa-bjBNqC5c",
+            authDomain: "flywithmeri.firebaseapp.com",
+            projectId: "flywithmeri",
+            storageBucket: "flywithmeri.appspot.com",
+            messagingSenderId: "1081855836359",
+            appId: "1:1081855836359:web:13c2f6d98703d04994422"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // --- טעינת המלצות מאושרות ---
+        async function loadTestimonials() {
+            const q = query(
+                collection(db, "testimonials"),
+                where("approved", "==", true),
+                orderBy("createdAt", "desc")
+            );
+
+            const snapshot = await getDocs(q);
+            const container = document.getElementById("testimonialsList");
+            container.innerHTML = "";
+
+            snapshot.forEach(doc => {
+                const t = doc.data();
+                container.innerHTML += `
+                    <p class="italic mb-2">"${t.text}" : ${t.name}</p>
+                `;
+            });
+        }
+
+        loadTestimonials();
+
+        // --- שליחת המלצה ---
+        const form = document.getElementById("testimonialForm");
+        const successMsg = document.getElementById("successMsg");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById("nameInput").value;
+            const text = document.getElementById("textInput").value;
+
+            await addDoc(collection(db, "testimonials"), {
+                name,
+                text,
+                approved: false,
+                createdAt: serverTimestamp()
+            });
+
+            successMsg.classList.remove("hidden");
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>
