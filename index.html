@@ -32,6 +32,28 @@
             from { opacity: 0; transform: translateY(5px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #C8DD8D;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            line-height: 1.5;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #444;
+        }
+
+        .testimonial-name {
+            margin-top: 2px;
+            font-weight: bold;
+            color: #6F7F3A;
+            text-align: left;
+        }
+
     </style>
 </head>
 
@@ -217,12 +239,13 @@
 
         <section id="testimonials" class="tab-content bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D]">
             <h2 class="text-2xl font-bold mb-4">המלצות</h2>
-            <div id="testimonialsList"></div>
+            <div id="testimonialsList" class="space-y-4"></div>
+  
 
-            <p class="italic mb-2">"השיעורים העלו לי את הביטחון העצמי! ממליצה לכולן" : נועה</p>
+          <!--   <p class="italic mb-2">"השיעורים העלו לי את הביטחון העצמי! ממליצה לכולן" : נועה</p>
             <p class="italic mb-2">"מרי מורה מדהימה, נותנת המון תחושת ביטחון, הרגשתי בטוחה מהרגע הראשון" : יעל</p>
             <p class="italic">"זה פשוט קסם. כל שיעור מרגיש כמו מתנה לעצמי" : שירה</p>
-
+ -->
                 <section id="add-testimonial" class="bg-white p-6 rounded-2xl shadow-sm border border-[#C8DD8D] mt-6">
                     <h3 class="text-xl font-bold mb-4">השתתפתי בשיעור/ סדנה ורוצה להמליץ:</h3>
 
@@ -632,8 +655,12 @@ function openTab(evt, tabName) {
             snapshot.forEach(doc => {
                 const t = doc.data();
                 container.innerHTML += `
-                    <p class="italic mb-2">"${t.text}" : ${t.name}</p>
+                <div class="testimonial-card">
+                        <p class="testimonial-text">${t.text}</p>
+                        <p class="testimonial-name">${t.name}</p>
+                    </div>
                 `;
+
             });
         }
 
