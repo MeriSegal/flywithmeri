@@ -119,17 +119,6 @@ document.getElementById("mediaModal").onclick = () => {
     document.getElementById("modalContent").innerHTML = "";
 };
 </script>
-<!-- 
-<script>
-    function openImage(src) {
-    document.getElementById("modalImg").src = src;
-    document.getElementById("imageModal").classList.remove("hidden");
-    }
-
-    document.getElementById("imageModal").onclick = () => {
-    document.getElementById("imageModal").classList.add("hidden");
-    };
-</script> -->
 
 
 <body>
@@ -498,33 +487,33 @@ document.getElementById("mediaModal").onclick = () => {
 
                             <!-- Video 1 -->
                             <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
-                                <video src="images/sadnazug1.mp4"   muted playsinline class="w-full h-full object-cover"></video>
+                                <video src="images/sadna2.mp4"   muted playsinline class="w-full h-full object-cover"  onclick="openImage(this.getAttribute('src'))"></video>
                             </div>
 
                             <!-- Video 2 -->
                                <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
-                                <video src="images/galandshalom.mp4"   muted playsinline class="w-full h-full object-cover"></video>
+                                <video src="images/galandshalom.mp4"   muted playsinline class="w-full h-full object-cover"  onclick="openImage(this.getAttribute('src'))"></video>
                             </div>
                            
                             <!-- Video 3 -->
                             <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
-                                <video src="images/sadna1.mp4"  muted playsinline class="w-full h-full object-cover"></video>
+                                <video src="images/sadna1.mp4"  muted playsinline class="w-full h-full object-cover"  onclick="openImage(this.getAttribute('src'))"></video>
                             </div>
 
                             <!-- Video 4 -->
                              <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
-                                <video src="images/sadnazug2.mp4"   muted playsinline class="w-full h-full object-cover"></video>
+                                <video src="images/sadnazug1.mp4"   muted playsinline class="w-full h-full object-cover"  onclick="openImage(this.getAttribute('src'))"></video>
                             </div>
                            
 
                             <!-- Video 5 -->
                             <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
-                                <video src="images/shalomdrop.mp4"   muted playsinline class="w-full h-full object-cover"></video>
+                                <video src="images/shalomdrop.mp4"   muted playsinline class="w-full h-full object-cover"  onclick="openImage(this.getAttribute('src'))"></video>
                             </div>
 
                             <!-- Video 6 -->
                             <div class="w-52 h-40 rounded-2xl overflow-hidden border-2 border-[#1F5A35]">
-                                <video src="images/sadna2.mp4"  muted playsinline class="w-full h-full object-cover"></video>
+                                <video src="images/sadnazug2.mp4"  muted playsinline class="w-full h-full object-cover"  onclick="openImage(this.getAttribute('src'))"></video>
                             </div>
 
 
