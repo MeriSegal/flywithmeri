@@ -54,6 +54,23 @@
             text-align: left;
         }
 
+        #imageModal {
+        display: none;
+        }
+
+        #imageModal.flex {
+        display: flex;
+        }
+
+
+        @media (min-width: 768px) {
+        #modalImg {
+            width: 600px;      /* גודל אחיד */
+            height: auto;      /* שומר על יחס */
+            max-height: 80vh;  /* שלא יגלוש מהמסך */
+            object-fit: contain;
+        }
+        }
 
     
     </style>
@@ -64,34 +81,29 @@
   <img id="modalImg" class="max-w-full max-h-full rounded-xl">
 </div> -->
 
-<!-- //פופ לתמונות ווידאו
- -->
-<div id="mediaModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50 p-4">
-    <div id="modalContent" class="max-w-full max-h-full"></div>
-</div>
+<!-- //פופ לתמונות  -->
 
-<script>
-    function openImage(src) {
-        const modal = document.getElementById("mediaModal");
-        const content = document.getElementById("modalContent");
-        content.innerHTML = `<img src="${src}" class="max-w-full max-h-full rounded-xl">`;
-        modal.classList.remove("hidden");
-    }
+    <div id="imageModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+        <div class="rounded-xl overflow-hidden ">
+            <img id="modalImg" class="w-full h-full object-cover">
+        </div>
+    </div>
 
-    function openVideo(src) {
-        const modal = document.getElementById("mediaModal");
-        const content = document.getElementById("modalContent");
-        content.innerHTML = `
-            <video src="${src}" controls autoplay class="max-w-full max-h-full rounded-xl"></video>
-        `;
-        modal.classList.remove("hidden");
-    }
 
-    document.getElementById("mediaModal").onclick = () => {
-        document.getElementById("mediaModal").classList.add("hidden");
-        document.getElementById("modalContent").innerHTML = "";
-    };
-</script>
+    <script>
+        function openImage(src) {
+            const modal = document.getElementById("imageModal");
+            document.getElementById("modalImg").src = src;
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+            }
+
+            document.getElementById("imageModal").onclick = () => {
+            const modal = document.getElementById("imageModal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        };
+    </script>
 
 
 <body>
@@ -141,12 +153,6 @@
        <!-- ABOUT -->
 <section id="about" class="tab-content active bg-white p-8 rounded-2xl shadow-sm border border-[#C8DD8D]">
     <h2 class="text-2xl font-bold mb-4">נעים להכיר</h2>
-
-    <!-- תמונה מיושרת לימין -->
-   <!--  <div class="float-right w-48 h-60 ml-4 mb-4 rounded-2xl overflow-hidden border-4 border-[#C8DD8D] shadow-sm">
-        <img src="images/meriface1.jpg" alt="meri hammock" class="w-full h-full object-cover">
-    </div> -->
-
 
   <div class="w-48 h-60 mb-4 rounded-2xl overflow-hidden border-4 border-[#C8DD8D] shadow-sm
             mx-auto md:mx-0
